@@ -1,13 +1,20 @@
+  
+// Business Logic for AddressBook ---------
 function AddressBook() {
-  this.contacts = [];
+  this.contacts = []
 }
 
+AddressBook.prototype.addContact = function(contact) {
+  this.contacts.push(contact);
+}
+
+// Business Logic for Contacts ---------
 function Contact(firstName, lastName, phoneNumber) {
-  this.firstName = firstName;
-  this.lastName = lastName;
-  this.phoneNumber = phoneNumber;
+  this.firstName = firstName,
+  this.lastName = lastName,
+  this.phoneNumber = phoneNumber
 }
 
-Contact.fullname = function() {
+Contact.prototype.fullName = function() {
   return this.firstName + " " + this.lastName;
 }

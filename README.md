@@ -1,12 +1,20 @@
-# _Application Name_
+# _Address Book_
 
-#### _Brief description of application, Date of current version_
+#### _Objects in JavaScript Exersice for Epicodus, August 24th, 2020_
 
-#### By _**List of contributors**_
+#### By _**Mike Manchee and Sean Wilson**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+Build an address book that uses constructors and prototypes.
+
+## TDD
+  SPECS
+
+  [x] - Build a basic constructor for an address book.
+        Input: Name, and Number
+        Output: [XYZ],[ABC] and 555-55-1212
+
 
 ## Setup/Installation Requirements
 
@@ -40,5 +48,5 @@ _{Tell me about the languages and tools you used to create this app. Assume that
 
 ### License
 
-Copyright (c) 2020 **_{List of contributors or company name}_**
+Copyright (c) 2020 **_Mike Manchee and Sean Wilson_**
 Licenced under MIT
