@@ -1,7 +1,7 @@
   
 // Business Logic for AddressBook ---------
 function AddressBook() {
-  this.contacts = [];
+  this.contacts = []
   this.currentId = 0;
 }
 
@@ -36,6 +36,28 @@ AddressBook.prototype.deleteContact = function(id) {
     }
   };
   return false;
+}
+
+// addressBook.updateContact(1, 0, 0, 555-666-1212)
+// addressBook.updateContact(1, Ada, Lovelace, 555-666-1212)
+// addressBook.updateCOntact(1, property, info)
+
+AddressBook.prototype.updateContact = function(id, first, last, number) {
+  for (let i = 0; i < this.contacts.length; i++) {
+    if (this.contacts[i]) {
+      if (this.contacts[i].id == id) {
+        if (first != "") {
+          this.contacts[i].firstName = first;
+        }
+        if (last != "") {
+          this.contacts[i].lastName = last;
+        }
+        if (number != "") {
+          this.contacts[i].phoneNumber = number;
+        }
+      }
+    }
+  }
 }
 
 // Business Logic for Contacts ---------
