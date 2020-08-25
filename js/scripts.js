@@ -63,9 +63,11 @@ AddressBook.prototype.updateContact = function(id, first, last, number) {
         if (number != "") {
           this.contacts[i].phoneNumber = number;
         }
+        return true;
       }
     }
-  }
+  };
+  return false;
 }
 
 // Business Logic for Contacts ---------
@@ -81,8 +83,21 @@ Contact.prototype.fullName = function() {
   return this.firstName + " " + this.lastName;
 }
 
+Contact.prototype.fullAddress = function () {
+ return this.street + "," + this.city + "," + this.state;
+}
+
 // User Interface Logic ---------
 let addressBook = new AddressBook();
+
+function displayContactDetails(addressBookToDisplay) {
+  let contactsList = $("ul#contacts");
+  let htmlForContactInfo = "";
+  addressBookToDisplay.contacts.forEach(function(contact) {
+    htmlForContactInfo += "<li id=" + contact.id + ">" + contact.firstName + " " + contact.lastName + "</li>";
+  });
+  contactsList.html(htmlForContactInfo);
+};
 
 $(document).ready(function() {
   $("form#new-contact").submit(function(event) {
@@ -90,6 +105,9 @@ $(document).ready(function() {
     const inputtedFirstName = $("input#new-first-name").val();
     const inputtedLastName = $("input#new-last-name").val();
     const inputtedPhoneNumber = $("input#new-phone-number").val();
+    const inputtedStreet = $("input#new-street-name").val();
+    const inputtedCity = $("input#new-city-name").val();
+    const inputtedState = $("input#new-state-name").val();
     let newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber);
     addressBook.addContact(newContact);
     console.log(addressBook.contacts);
