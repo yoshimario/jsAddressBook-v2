@@ -1,8 +1,8 @@
-# _Address Book_
+# _Address Book V2_
 
 #### _Objects in JavaScript Exersice for Epicodus, August 24th, 2020_
 
-#### By _**Mike Manchee and Sean Wilson**_
+#### By _**David Butler and Sean Wilson**_
 
 ## Description
 

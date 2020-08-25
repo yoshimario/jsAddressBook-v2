@@ -61,10 +61,12 @@ AddressBook.prototype.updateContact = function(id, first, last, number) {
 }
 
 // Business Logic for Contacts ---------
-function Contact(firstName, lastName, phoneNumber) {
+function Contact(firstName, lastName, phoneNumber, email, address) {
   this.firstName = firstName,
   this.lastName = lastName,
   this.phoneNumber = phoneNumber
+  this.email = email;
+  this.address = [];
 }
 
 Contact.prototype.fullName = function() {
